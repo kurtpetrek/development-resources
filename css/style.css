@@ -1,5 +1,13 @@
+html {
+  max-width: 100vw;
+}
+
 body {
   padding-top: 50px;
+}
+
+.word-break {
+  word-break: break-all;
 }
 
 .md-text {
