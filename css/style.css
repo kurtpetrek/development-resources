@@ -1,0 +1,52 @@
+body {
+  padding-top: 50px;
+}
+
+.md-text {
+  font-size: 1.7rem;
+  line-height: 2.3rem;
+}
+
+.main-header {
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/desk-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  font-size: 5rem;
+}
+
+@media (max-width: 700px){
+  .main-header {
+    background-attachment: scroll;
+  }
+}
+
+.nav-pad {
+  padding-top: 60px;
+}
+
+.main-header-text {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 4rem;
+  border-bottom: 5px double rgba(0,0,0,0.1);
+  padding-bottom: 10px;
+}
+
+.md-padding{
+  padding: 4rem;
+}
+
+.full-max-700 {
+  width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 700px;
+}
