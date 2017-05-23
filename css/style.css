@@ -25,6 +25,7 @@ body {
   background-attachment: fixed;
   color: #fff;
   font-size: 5rem;
+  position: relative;
 }
 
 @media (max-width: 700px){
@@ -32,6 +33,55 @@ body {
     background-attachment: scroll;
   }
 }
+
+.scroll-down {
+  position: absolute;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  left: 50%;
+  bottom: 2%;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+.scroll-down::before, .scroll-down::after {
+  content: '';
+  width: 50%;
+  border-bottom: 2px solid white;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.scroll-down::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 34%;
+  bottom: 20px;
+  width: 53%;
+}
+.scroll-down p {
+  color: white;
+  position: relative;
+  top: 0;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.scroll-down:hover::before, .scroll-down:hover::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  bottom: 10px;
+}
+.scroll-down:hover p {
+  opacity: 1;
+  top: 10px;
+}
+
 
 .nav-pad {
   padding-top: 60px;
