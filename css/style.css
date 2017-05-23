@@ -6,6 +6,10 @@ body {
   padding-top: 50px;
 }
 
+.container {
+  outline: none !important;
+}
+
 .word-break {
   word-break: break-all;
 }
