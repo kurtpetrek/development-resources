@@ -115,6 +115,15 @@ body {
 
 @media (max-width: 500px){
   .full-max-700 {
-    width: 70%;
+    width: 100%;
   }
 }
+
+.center-text {
+  text-align: center;
+}
+
+.attribute {
+  font-size: 12px;
+}
+
