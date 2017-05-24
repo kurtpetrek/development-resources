@@ -107,8 +107,14 @@ body {
 }
 
 .full-max-700 {
-  width: 100%;
+  width: 50%;
   display: block;
   margin: auto;
   max-width: 700px;
+}
+
+@media (max-width: 500px){
+  .full-max-700 {
+    width: 70%;
+  }
 }
