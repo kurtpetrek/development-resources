@@ -43,7 +43,7 @@ body {
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
   left: 50%;
-  bottom: 2%;
+  bottom: 10%;
   width: 100px;
   height: 50px;
   cursor: pointer;
