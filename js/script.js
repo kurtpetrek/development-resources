@@ -40,3 +40,23 @@ $('a[href*="#"]')
       }
     }
   });
+
+$(window).scroll(function(){
+  var scroll = $(window).scrollTop();
+  
+  $('#main-header__pen').css({
+    'transform': 'translate(' + scroll + '%, ' + scroll / 5 + '%) rotate(' + Math.floor(scroll / 10) + 20 + 'deg)'
+  });
+  
+  $('#main-header__comp').css({
+    'transform': 'translateY(-' + scroll / 7 + '%)'
+  });
+  
+  $('#main-header__book').css({
+    'transform': 'translate(-' + scroll / 3 + '%, ' + scroll / 7 + '%)'
+  });
+  
+  $('#main-header__text').css({
+    'transform': 'translateY(' + scroll / 4 + '%)'
+  });
+});
