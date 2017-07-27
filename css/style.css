@@ -156,11 +156,47 @@ body {
   display: block;
   margin: auto;
   max-width: 700px;
+  position: relative;
+  opacity: 1;
 }
 
 @media (max-width: 500px){
   .full-max-700 {
     width: 100%;
+  }
+}
+
+.img-container {
+  overflow: hidden;
+}
+
+.move-img-in {
+  animation: move-img-in 1.5s forwards;
+}
+
+@keyframes move-img-in {
+  0% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0);
+    opacity: 1;
+  }
+}
+
+.move-img-out {
+  animation: move-img-out 1.5s forwards;
+}
+
+@keyframes move-img-out {
+  0% {
+    transform: translate(0%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 0);
+    opacity: 0;
   }
 }
 

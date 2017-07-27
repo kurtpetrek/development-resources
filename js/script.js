@@ -41,9 +41,12 @@ $('a[href*="#"]')
     }
   });
 
+
+// Parallax header elements
 $(window).scroll(function(){
   var scroll = $(window).scrollTop();
   var headerHeight = $('.main-header').height();
+  var pics = $('.full-max-700');
   
   if(scroll < headerHeight + 20){
     $('#main-header__pen').css({
@@ -62,4 +65,7 @@ $(window).scroll(function(){
         'transform': 'translateY(' + scroll / 4 + '%)'
     });
   }
+  
 });
+
+
