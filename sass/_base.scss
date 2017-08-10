@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 70px 10px 0;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.hide {
+  display: none;
+}
