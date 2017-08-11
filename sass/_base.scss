@@ -5,11 +5,48 @@
 }
 
 html {
-  padding: 70px 10px 0;
+  padding: 60px 0px 0;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
 }
 
+p {
+  padding: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  max-width: 900px;
+  margin: auto;
+}
+
 .hide {
   display: none;
+}
+
+#main-content {
+  height: 300vh;
+  transition: .5s;
+}
+
+#main-heading {
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 4rem;
+
+  &__changer span{
+    animation: grow 3s forwards;
+    position: relative;
+    display: inline-block;
+    transform: scale(0);
+  }
+}
+
+@keyframes grow {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+
+@media (max-width: 600px){
+  #main-heading {
+    font-size: 3rem;
+  }
 }

@@ -18,6 +18,7 @@
   position: relative;
   top: 3px;
 }
+
 @media (max-width: 450px) {
   .nav-brand {
     font-size: 24px;
@@ -29,12 +30,6 @@
 
   display: flex;
   align-items: center;
-}
-
-#main-search {
-  padding: 5px;
-  border-radius: 3px;
-  border: none;
 }
 
 #nav-toggle {
@@ -172,6 +167,15 @@
       &::after {
         height: 4px;
       }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  #main-nav-items {
+    font-size: 20px;
+    li{
+      padding: 5px;
     }
   }
 }

@@ -438,15 +438,68 @@ template {
 }
 
 html {
-  padding: 70px 10px 0;
+  padding: 60px 0px 0;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
+}
+
+p {
+  padding: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 .hide {
   display: none;
 }
 
+#main-content {
+  height: 300vh;
+  transition: .5s;
+}
+
+#main-heading {
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 4rem;
+}
+#main-heading__changer span {
+  -webkit-animation: grow 3s forwards;
+          animation: grow 3s forwards;
+  position: relative;
+  display: inline-block;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@media (max-width: 600px) {
+  #main-heading {
+    font-size: 3rem;
+  }
+}
 #top-nav {
   padding: 5px 20px 10px;
   background: #5D6771;
@@ -481,12 +534,6 @@ html {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-}
-
-#main-search {
-  padding: 5px;
-  border-radius: 3px;
-  border: none;
 }
 
 #nav-toggle {
@@ -624,6 +671,14 @@ html {
   height: 4px;
 }
 
+@media (max-width: 450px) {
+  #main-nav-items {
+    font-size: 20px;
+  }
+  #main-nav-items li {
+    padding: 5px;
+  }
+}
 #main-nav-items.nav-items-shown {
   -webkit-transform: translatex(0vw);
           transform: translatex(0vw);
@@ -653,4 +708,42 @@ html {
     -webkit-transform: translatex(-75vw);
             transform: translatex(-75vw);
   }
+}
+.landing {
+  position: relative;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  box-shadow: 0px 6px 34px 0px rgba(0, 0, 0, 0.47);
+}
+.landing img {
+  position: absolute;
+  transition: .1s;
+}
+.landing__html {
+  width: 25%;
+  left: 5%;
+  top: 5%;
+}
+.landing__css {
+  width: 30%;
+  left: 65%;
+  top: 10%;
+}
+.landing__js {
+  width: 40%;
+  top: 30%;
+  left: 28%;
+}
+.landing__php {
+  width: 25%;
+  top: 60%;
+}
+.landing__ruby {
+  width: 30%;
+  left: 70%;
+  top: 70%;
+}
+
+#code-canvas {
+  width: 100%;
 }
