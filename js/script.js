@@ -220,7 +220,7 @@ var articleData = {
       linkURL: 'http://learn.shayhowe.com/'
     },
     {
-      title: 'You Don\t Knoe JS',
+      title: 'You Don\'t Know JS',
       description: 'This is a series of books diving deep into the core mechanisms of the JavaScript language.',
       linkURL: 'https://github.com/getify/You-Dont-Know-JS/blob/master/README.md'
     },
@@ -293,6 +293,12 @@ function createArticleContent(){
 
   contentContainer.innerHTML += '<h2 id="exercises">Exercises</h2>';
   articleData.exercises.forEach(function(x){
+    var item = createArticleItem(x);
+    contentContainer.appendChild(item);
+  });
+
+  contentContainer.innerHTML += '<h2 id="ebooks">eBooks</h2>';
+  articleData.ebooks.forEach(function(x){
     var item = createArticleItem(x);
     contentContainer.appendChild(item);
   });
