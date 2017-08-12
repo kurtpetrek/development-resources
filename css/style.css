@@ -449,11 +449,6 @@ html {
     font-size: 12px;
   }
 }
-h3 {
-  font-size: 2rem;
-  margin: 1rem 0;
-}
-
 h2 {
   font-size: 3rem;
   text-align: center;
@@ -462,10 +457,15 @@ h2 {
   padding-top: 70px;
 }
 
+h3 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
 p {
   padding: 1rem;
-  font-size: 1.3rem;
-  line-height: 1.7rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
   max-width: 900px;
   margin: auto;
 }
@@ -488,6 +488,12 @@ a::after {
 a:hover::after {
   width: 100%;
   left: 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.15) 54%, transparent 100%);
 }
 
 .hide {
@@ -546,7 +552,7 @@ a:hover::after {
   }
 }
 #top-nav {
-  padding: 5px 20px 10px;
+  padding: 5px 10px 10px;
   background: #5D6771;
   display: -ms-flexbox;
   display: flex;
@@ -571,7 +577,7 @@ a:hover::after {
 
 @media (max-width: 450px) {
   .nav-brand {
-    font-size: 24px;
+    font-size: 27px;
   }
 }
 .top-nav-right {

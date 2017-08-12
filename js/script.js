@@ -163,12 +163,88 @@ var articleData = {
       description: 'A site of gradients to help you build your UI.',
       linkURL: 'https://uigradients.com/'
     }
+  ],
+  podcasts: [
+    {
+      title: 'Shop Talk Show',
+      description: 'This is my favorite podcast on web development, starring Dave Rupert and Chris Coyier it\'s a bit like the Car Talk of Web Development.',
+      linkURL: 'http://shoptalkshow.com/'
+    },
+    {
+      title: 'Codepen Radio',
+      description: 'A podcast all about what it\'s like running a small web software business. The good, the bad, and the ugly.',
+      linkURL: 'https://blog.codepen.io/radio/'
+    },
+    {
+      title: 'Syntax',
+      description: 'A Tasty Treats Podcast for Web Developers.',
+      linkURL: 'https://syntax.fm/'
+    }
+  ],
+  exercises: [
+    {
+      title: 'Flexbox Froggy',
+      description: 'Flexbox is part of the future for creating website layouts with CSS, with 97%+ support worldwide (with prefixes) the future is happening now. This is a game to help you learn flexbox.',
+      linkURL: 'https://flexboxfroggy.com/'
+    },
+    {
+      title: 'Flexbox Defense',
+      description: 'This is another game to help learn flexbox CSS properties and values.',
+      linkURL: 'http://www.flexboxdefense.com/'
+    },
+    {
+      title: 'HTML &amp; CSS Quiz',
+      description: 'This is a small web app I am developing (still very much in beta) to help students test their HTML and CSS knowledge.',
+      linkURL: 'http://kurtpetrek.com/quiz'
+    },
+    {
+      title: 'CodeFights',
+      description: 'CodeFights is a fun way to practice programming, prepare for technical interviews and level up your coding skills.',
+      linkURL: 'https://codefights.com/'
+    },
+    {
+      title: 'Coding Game',
+      description: 'CodinGame is a challenge-based training platform for programmers where you can improve your coding skills with fun exercises (25+ languages supported)',
+      linkURL: 'https://www.codingame.com/'
+    },
+    {
+      title: 'General Assembly Prework',
+      description: 'The prework for General Assembly is avaliable to complete free and can help you learn the basics of html, css and js.',
+      linkURL: 'http://fundamentals.generalassemb.ly/'
+    }
+  ],
+  ebooks: [
+    {
+      title: 'Learn to Code HTML &amp; CSS',
+      description: 'A good ebook to help learn HTML and CSS basics.',
+      linkURL: 'http://learn.shayhowe.com/'
+    },
+    {
+      title: 'You Don\t Knoe JS',
+      description: 'This is a series of books diving deep into the core mechanisms of the JavaScript language.',
+      linkURL: 'https://github.com/getify/You-Dont-Know-JS/blob/master/README.md'
+    },
+    {
+      title: 'Eloquent JavaScript',
+      description: 'This is a book about JavaScript, programming, and the wonders of the digital.',
+      linkURL: 'http://eloquentjavascript.net/'
+    },
+    {
+      title: 'Learn Ruby the Hard Way',
+      description: 'A free e-book to learn Ruby.',
+      linkURL: 'https://learnrubythehardway.org/book/'
+    },
+    {
+      title: 'A re-introduction to JavaScript',
+      description: 'Article on Mozilla Developer Network to gain a better understanding of JavaScript.',
+      linkURL: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript'
+    }
   ]
 };
 
 function createArticleItem(item) {
   var d = document.createElement('div');
-  var contentString = '<h3><a target="_blank" href="' +  item.linkURL + '"><h3>' + item.title + '</a></h3>';
+  var contentString = '<h3><a target="_blank" href="' +  item.linkURL + '">' + item.title + '</a></h3>';
   contentString += '<p>' + item.description;
   contentString += '</p><hr>';
   // contentString += '<a target="_blank" href="' + item.linkURL + '">' + item.linkText + '</a>';
@@ -205,6 +281,18 @@ function createArticleContent(){
 
   contentContainer.innerHTML += '<h2 id="color">Color</h2>';
   articleData.color.forEach(function(x){
+    var item = createArticleItem(x);
+    contentContainer.appendChild(item);
+  });
+
+  contentContainer.innerHTML += '<h2 id="podcasts">Podcasts</h2>';
+  articleData.podcasts.forEach(function(x){
+    var item = createArticleItem(x);
+    contentContainer.appendChild(item);
+  });
+
+  contentContainer.innerHTML += '<h2 id="exercises">Exercises</h2>';
+  articleData.exercises.forEach(function(x){
     var item = createArticleItem(x);
     contentContainer.appendChild(item);
   });
