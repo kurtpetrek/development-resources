@@ -20,11 +20,13 @@ class App extends Component {
 
   render() {
     return (
-      <Layout
-        navOpen={this.state.navOpen}
-        toggleNav={this.toggleNav}
-        articleData={this.state.articleData}
-      />
+      <div id="top">
+        <Layout
+          navOpen={this.state.navOpen}
+          toggleNav={this.toggleNav}
+          articleData={this.state.articleData}
+        />
+      </div>
     );
   }
 }

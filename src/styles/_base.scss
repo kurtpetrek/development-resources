@@ -9,6 +9,7 @@ html {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 @media (max-width: 700px){
   html {
@@ -78,7 +79,7 @@ hr {
 }
 
 #main-heading {
-  padding: 10px 0px;
+  padding: 50px 0px 10px;
   text-align: center;
   font-size: 4rem;
 

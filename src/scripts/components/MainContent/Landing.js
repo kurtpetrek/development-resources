@@ -21,6 +21,7 @@ class Landing extends Component {
     };
 
     this.handleCodeCanvas();
+
   }
 
   componentWillUnmount(){
@@ -97,6 +98,10 @@ class Landing extends Component {
         <img src="images/js.svg" alt="JS icon" className="landing__js" />
         <img src="images/php.svg" alt="PHP icon" className="landing__php" />
         <img src="images/ruby.svg" alt="Ruby icon" className="landing__ruby" />
+
+          <a href="#main-heading" className="scroll-down">
+            <p className="scroll-down--text"> Scroll Down </p>
+          </a>
       </div>
     )
   }
