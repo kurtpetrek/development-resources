@@ -50,9 +50,9 @@
   transform: translate(-50%,0%);
   left: 50%;
   bottom: 10%;
-  width: 100px;
+  width: 150px;
   z-index: 5;
-  height: 50px;
+  height: 75px;
   cursor: pointer;
   animation: scroll-down-bounce 3s infinite;
 
@@ -62,16 +62,16 @@
     border-bottom: 2px solid #777;
     position: absolute;
     bottom: 20px;
-    left: 0;
+    left: 8%;
     transform: rotate(45deg);
     transition: .5s;
   }
 
   &::after {
     transform: rotate(-45deg);
-    left: 34%;
+    left: 43%;
     bottom: 20px;
-    width: 53%;
+    width: 50%;
   }
 
   &--text {
@@ -79,8 +79,9 @@
     opacity: 0;
     transition: .5s;
     position: absolute;
+    text-align: center;
     transform: translate(-50%, -50%);
-    left: 100%;
+    left: 50%;
     top: 30%;
     width: 200px;
   }
@@ -89,8 +90,13 @@
     &::before, &::after {
       transform: rotate(0deg);
       bottom: 10px;
+      width: 50%;
+    }
+    &::after {
+      left: 43%;
     }
     p {
+      top: 60%;
       opacity: 1;
     }
   }
