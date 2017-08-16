@@ -41,8 +41,8 @@ var articleData = {
       linkURL: 'http://caniuse.com/'
     },
     {
-      title: 'Can I Use',
-      description: 'Not all web browsers have the same functionality and features, this website will help show you what works in different versions of the most widely used web browsers.',
+      title: 'Codepen',
+      description: 'Codepen is a showcase of front end code.  On Codepen you can find many different projects users have developed to use as examples.  I don\'t recommend copying others code but rather learning from example and writing your own.',
       linkURL: 'http://caniuse.com/'
     }
   ],
@@ -86,12 +86,17 @@ var articleData = {
     },
     {
       title: 'DevTips',
-      description: 'A youtube channel for web development focusing on design.',
+      description: 'A YouTube channel for web development focusing on design.',
       linkURL: 'https://www.youtube.com/user/DevTipsForDesigners'
     },
     {
       title: 'Udacity',
       description: 'Udacity offers some free online courses that provide some great information.',
+      linkURL: 'https://www.udacity.com'
+    },
+    {
+      title: 'LearnCode.academy',
+      description: 'A great YouTube channel for JavaScript, workflows, frameworks and more.',
       linkURL: 'https://www.udacity.com'
     },
     {
@@ -115,6 +120,11 @@ var articleData = {
       title: 'Pexels',
       description: 'Another site for free images that can be used for commercial and non-commercial projects.',
       linkURL: 'https://www.pexels.com/'
+    },
+    {
+      title: 'Unsplash',
+      description: 'Yet another site for free images that can be used for commercial and non-commercial projects.',
+      linkURL: 'https://www.unsplash.com/'
     },
     {
       title: 'Transparent Textures',
@@ -215,7 +225,7 @@ var articleData = {
   ],
   ebooks: [
     {
-      title: 'Learn to Code HTML &amp; CSS',
+      title: 'Learn to Code HTML & CSS',
       description: 'A good ebook to help learn HTML and CSS basics.',
       linkURL: 'http://learn.shayhowe.com/'
     },
@@ -242,206 +252,4 @@ var articleData = {
   ]
 };
 
-function createArticleItem(item) {
-  var d = document.createElement('div');
-  var contentString = '<h3><a target="_blank" href="' +  item.linkURL + '">' + item.title + '</a></h3>';
-  contentString += '<p>' + item.description;
-  contentString += '</p><hr>';
-  // contentString += '<a target="_blank" href="' + item.linkURL + '">' + item.linkText + '</a>';
-  d.innerHTML = contentString;
-  return d;
-}
-
-function createArticleContent(){
-  var contentContainer = document.createElement('div');
-
-  contentContainer.innerHTML += '<h2 id="references">References</h2>';
-  articleData.references.forEach(function(x){
-    var item = createArticleItem(x);
-    contentContainer.appendChild(item);
-  });
-
-  contentContainer.innerHTML += '<h2 id="tutorials">Tutorials</h2>';
-  articleData.tutorials.forEach(function(x){
-    var item = createArticleItem(x);
-    contentContainer.appendChild(item);
-  });
-
-  contentContainer.innerHTML += '<h2 id="tutorial-videos">Tutorial Videos</h2>';
-  articleData.tutorialVideos.forEach(function(x){
-    var item = createArticleItem(x);
-    contentContainer.appendChild(item);
-  });
-
-  contentContainer.innerHTML += '<h2 id="images">Images</h2>';
-  articleData.images.forEach(function(x){
-    var item = createArticleItem(x);
-    contentContainer.appendChild(item);
-  });
-
-  contentContainer.innerHTML += '<h2 id="color">Color</h2>';
-  articleData.color.forEach(function(x){
-    var item = createArticleItem(x);
-    contentContainer.appendChild(item);
-  });
-
-  contentContainer.innerHTML += '<h2 id="podcasts">Podcasts</h2>';
-  articleData.podcasts.forEach(function(x){
-    var item = createArticleItem(x);
-    contentContainer.appendChild(item);
-  });
-
-  contentContainer.innerHTML += '<h2 id="exercises">Exercises</h2>';
-  articleData.exercises.forEach(function(x){
-    var item = createArticleItem(x);
-    contentContainer.appendChild(item);
-  });
-
-  contentContainer.innerHTML += '<h2 id="ebooks">eBooks</h2>';
-  articleData.ebooks.forEach(function(x){
-    var item = createArticleItem(x);
-    contentContainer.appendChild(item);
-  });
-
-  document.querySelector('.resource-items').innerHTML = '';
-  document.querySelector('.resource-items').appendChild(contentContainer);
-}
-
-createArticleContent();
-
-
-function toggleNav(){
-  var ham = document.querySelector('#nav-toggle .hamburger');
-  ham.classList.toggle('closed');
-  ham.classList.toggle('open');
-  document.querySelector('#main-nav-items').classList.toggle('nav-items-shown');
-  document.querySelector('#main-content').classList.toggle('main-content-moved');
-}
-
-document.querySelector('#nav-toggle').addEventListener('click', function(e){
-  toggleNav()
-});
-
-document.querySelector('#main-nav-items').addEventListener('click', function(e) {
-  if(this.classList.contains('nav-items-shown') && e.target.nodeName == 'A' ){
-    toggleNav()
-  }
-});
-
-var codeWorkAnm = {};
-
-var headingChanger = {
-  el: document.querySelector('#main-heading__changer'),
-  changing: true,
-  text1: 'Begins'.split(''),
-  text2: 'Continues'.split(''),
-  text3: 'Never Ends'.split(''),
-  current: 1,
-  interFun: function(){
-    if (headingChanger.current == 1){
-      var text = headingChanger.text1.slice();
-      headingChanger.current++;
-    } else if (headingChanger.current == 2) {
-      var text = headingChanger.text2.slice();
-      headingChanger.current++;
-    } else {
-      var text = headingChanger.text3.slice();
-      headingChanger.current = 1;
-    }
-
-    text.forEach(function(x, i, a) {
-      if (x !== ' '){
-        a[i] = '<span style="animation-delay: ' + i / 5 + 's;">' + a[i] + '</span>';
-      }
-    });
-    text = text.join('');
-    headingChanger.el.innerHTML = text;
-
-    setTimeout(function(){
-      var text = headingChanger.el.innerText.split('')
-      text.forEach(function(x, i, a) {
-        if (x !== ' '){
-          a[i] = '<span style="animation-direction: reverse">' + x + '</span>';
-        }
-      });
-      text = text.join('');
-      headingChanger.el.innerHTML = text;
-
-    }, 5000);
-  }
-};
-
-headingChanger.interFun();
-headingChanger.inter = window.setInterval(headingChanger.interFun, 9000);
-
-/* Code Canvas
-==================================== */
-function codeCanvas() {
-  codeWorkAnm.codeCanvas = document.getElementById("code-canvas");
-  codeWorkAnm.codeCanvas.height = window.innerHeight - 0;
-  codeWorkAnm.codeCtx = codeWorkAnm.codeCanvas.getContext("2d");
-  codeWorkAnm.codeCanvas.width = window.innerWidth;
-  codeWorkAnm.floatChar = "0123456789abcdefghijklmnopqrstuvwxyz<>{}%=-+[]#.?".split("");
-  codeWorkAnm.font_size = window.innerWidth / 40;
-  codeWorkAnm.col = codeWorkAnm.codeCanvas.width;
-  codeWorkAnm.charDrops = [];
-  codeWorkAnm.running = true;
-
-  for (var i = 0; i < codeWorkAnm.col; i++) {
-    codeWorkAnm.charDrops[i] = 1;
-  }
-
-  codeWorkAnm.putPixel = function () {
-    codeWorkAnm.codeCtx.fillStyle = "rgba(255, 255, 255, 0.05)";
-    codeWorkAnm.codeCtx.fillRect(0, 0, codeWorkAnm.codeCanvas.width, codeWorkAnm.codeCanvas.height);
-    codeWorkAnm.codeCtx.fillStyle = "rgba(0, 0, 0, 0.35)";
-    codeWorkAnm.codeCtx.font = codeWorkAnm.font_size + " arial";
-    for (var i = 0; i < codeWorkAnm.charDrops.length; i++) {
-      var txt = codeWorkAnm.floatChar[Math.floor(Math.random() * codeWorkAnm.floatChar.length)];
-      codeWorkAnm.codeCtx.fillText(txt, i * codeWorkAnm.font_size, codeWorkAnm.charDrops[i] * codeWorkAnm.font_size);
-      if (codeWorkAnm.charDrops[i] * codeWorkAnm.font_size > codeWorkAnm.codeCanvas.height && Math.random() > 0.975) {
-        codeWorkAnm.charDrops[i] = 0;
-      }
-      codeWorkAnm.charDrops[i]++;
-    }
-  }
-  codeWorkAnm.interval = setInterval(codeWorkAnm.putPixel, 66);
-}
-
-codeCanvas();
-
-window.onresize = function (event) {
-  if((window.innerHeight % 150 > 0 && window.innerHeight % 150 < 10) || (window.innerWidth % 50 > 0 && window.innerWidth % 50 < 10)){
-    clearInterval(codeWorkAnm.interval);
-    codeCanvas();
-  }
-};
-
-window.addEventListener('scroll', function (e) {
-  var pos = window.pageYOffset;
-  var height = window.innerHeight || window.clientHeight;
-
-  if (pos < height) {
-    var html = document.querySelector('.landing__html');
-    var css = document.querySelector('.landing__css');
-    var js = document.querySelector('.landing__js');
-    var php = document.querySelector('.landing__php');
-    var ruby = document.querySelector('.landing__ruby');
-
-
-    html.style.transform = 'translate(' + Math.floor(pos / 8) + '%,' + Math.floor(pos / 5) + '%)';
-    css.style.transform = 'translate(' + Math.floor(pos / -8) + '%,' + Math.floor(pos / -5) + '%)';
-    js.style.transform = 'translate(' + Math.floor(pos / 8) + '%,' + Math.floor(pos / -12) + '%)';
-    php.style.transform = 'translate(' + Math.floor(pos / 8) + '%,' + Math.floor(pos / -42) + '%)';
-    ruby.style.transform = 'translate(' + Math.floor(pos / -5) + '%,' + Math.floor(pos / -5) + '%)';
-
-    if (codeWorkAnm.running === false) {
-      codeWorkAnm.interval = setInterval(codeWorkAnm.putPixel, 66);
-      codeWorkAnm.running = true;
-    }
-  } else if (codeWorkAnm.running === true) {
-    clearInterval(codeWorkAnm.interval);
-    codeWorkAnm.running = false;
-  }
-
-})
+export default articleData;
