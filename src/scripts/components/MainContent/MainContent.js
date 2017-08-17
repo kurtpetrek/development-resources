@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Landing from "./Landing.js";
 import Welcome from "./Welcome.js";
 import ArticleList from "./ArticleList.js";
+import PropTypes from "prop-types";
 
 class MainContent extends Component {
   render() {
@@ -18,5 +19,10 @@ class MainContent extends Component {
     );
   }
 }
+
+MainContent.propTypes = {
+  navStatus: PropTypes.bool,
+  articleData: PropTypes.object
+};
 
 export default MainContent;

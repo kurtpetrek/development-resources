@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Nav from "./Nav/Nav.js";
 import MainContent from "./MainContent/MainContent.js";
+import PropTypes from "prop-types";
 
 class Layout extends Component {
   render() {
@@ -15,5 +16,11 @@ class Layout extends Component {
     );
   }
 }
+
+Layout.propTypes = {
+  navOpen: PropTypes.bool,
+  toggleNav: PropTypes.func,
+  articleData: PropTypes.object
+};
 
 export default Layout;

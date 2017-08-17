@@ -1,16 +1,17 @@
-import React, {Component} from 'react';
-import ArticleItem from './ArticleItem.js'
+import React, { Component } from "react";
+import ArticleItem from "./ArticleItem.js";
+import PropTypes from "prop-types";
 
 class ArticleList extends Component {
-  createItems = (arr) => {
+  createItems = arr => {
     let newArr = [];
-    arr.forEach(function(x, i){
-      newArr.push(<ArticleItem data={x} key={i}/>);
-    })
+    arr.forEach(function(x, i) {
+      newArr.push(<ArticleItem data={x} key={i} />);
+    });
     return newArr;
-  }
+  };
 
-  render(){
+  render() {
     var data = this.props.articleData;
 
     return (
@@ -38,10 +39,13 @@ class ArticleList extends Component {
 
         <h2 id="ebooks">eBooks</h2>
         {this.createItems(data.ebooks)}
-
       </article>
-    )
+    );
   }
 }
+
+ArticleList.propTypes = {
+  articleData: PropTypes.object
+};
 
 export default ArticleList;

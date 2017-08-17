@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class Nav extends Component {
   render() {
@@ -69,5 +70,10 @@ class Nav extends Component {
     );
   }
 }
+
+Nav.propTypes = {
+  navOpen: PropTypes.bool,
+  handleToggle: PropTypes.func
+};
 
 export default Nav;

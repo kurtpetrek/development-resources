@@ -1,17 +1,26 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class ArticleItem extends Component {
-  render(){
+  render() {
     var data = this.props.data;
 
     return (
       <div>
-        <h3><a href={data.linkURL} target="_blank">{data.title}</a></h3>
+        <h3>
+          <a href={data.linkURL} target="_blank">
+            {data.title}
+          </a>
+        </h3>
         <p dangerouslySetInnerHTML={{ __html: data.description }} />
         <hr />
       </div>
-    )
+    );
   }
 }
+
+ArticleItem.propTypes = {
+  data: PropTypes.object
+};
 
 export default ArticleItem;
