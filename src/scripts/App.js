@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Layout from './components/Layout.js';
-import articleData from './data.js';
+import React, { Component } from "react";
+import Layout from "./components/Layout.js";
+import articleData from "./data.js";
 
 class App extends Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class App extends Component {
     this.state = {
       navOpen: false,
       articleData
-    }
+    };
   }
 
   toggleNav = () => {
@@ -16,7 +16,7 @@ class App extends Component {
     this.setState({
       navOpen: navStatus
     });
-  }
+  };
 
   render() {
     return (

@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true
+  },
+  "plugins": ["react", "prettier"],
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "react/no-unused-prop-types": [1],
+    "react/prop-types": [1],
+    "no-unused-vars": [1],
+    "prettier/prettier": ["error"]
+  }
+}
