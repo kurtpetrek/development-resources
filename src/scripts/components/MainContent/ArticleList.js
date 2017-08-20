@@ -2,50 +2,41 @@ import React, { Component } from "react";
 import ArticleItem from "./ArticleItem.js";
 import PropTypes from "prop-types";
 
-class ArticleList extends Component {
-  createItems = arr => {
-    let newArr = [];
-    arr.forEach(function(x, i) {
-      newArr.push(<ArticleItem data={x} key={i} />);
-    });
-    return newArr;
-  };
+function ArticleSection(props) {
+  const section = props.section;
+  return (
+    <div>
+      <h2 id={section}>References</h2>
+      {section.items.map(item => {
+        <ArticleItem data={item} key={item.title} />;
+      })}
+    </div>
+  );
+}
 
+ArticleSection.propTypes = {
+  section: PropTypes.obj
+};
+
+class ArticleList extends Component {
   render() {
-    var data = this.props.articleData;
+    var data = this.props.data;
 
     return (
       <article className="resource-items">
-        <h2 id="references">References</h2>
-        {this.createItems(data.references)}
-
-        <h2 id="tutorials">Tutorials</h2>
-        {this.createItems(data.tutorials)}
-
-        <h2 id="tutorial-videos">Tutorial Videos</h2>
-        {this.createItems(data.tutorialVideos)}
-
-        <h2 id="images">Images</h2>
-        {this.createItems(data.images)}
-
-        <h2 id="color">Color</h2>
-        {this.createItems(data.color)}
-
-        <h2 id="podcasts">Podcasts</h2>
-        {this.createItems(data.podcasts)}
-
-        <h2 id="exercises">Exercises</h2>
-        {this.createItems(data.exercises)}
-
-        <h2 id="ebooks">eBooks</h2>
-        {this.createItems(data.ebooks)}
+        {Object.keys(data).map(sectionKey => {
+          <ArticleSection
+            key={`article-${sectionKey}`}
+            section={data[sectionKey]}
+          />;
+        })}
       </article>
     );
   }
 }
 
 ArticleList.propTypes = {
-  articleData: PropTypes.object
+  data: PropTypes.object
 };
 
 export default ArticleList;

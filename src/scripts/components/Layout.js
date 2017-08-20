@@ -7,11 +7,12 @@ class Layout extends Component {
   render() {
     return (
       <div>
-        <Nav navOpen={this.props.navOpen} handleToggle={this.props.toggleNav} />
-        <MainContent
-          navStatus={this.props.navOpen}
-          articleData={this.props.articleData}
+        <Nav
+          navOpen={this.props.navOpen}
+          handleToggle={this.props.toggleNav}
+          data={this.props.data}
         />
+        <MainContent navStatus={this.props.navOpen} data={this.props.data} />
       </div>
     );
   }
@@ -20,7 +21,7 @@ class Layout extends Component {
 Layout.propTypes = {
   navOpen: PropTypes.bool,
   toggleNav: PropTypes.func,
-  articleData: PropTypes.object
+  data: PropTypes.object
 };
 
 export default Layout;

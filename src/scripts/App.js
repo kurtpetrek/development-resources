@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Layout from "./components/Layout.js";
-import articleData from "./data.js";
+import data from "./data.js";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       navOpen: false,
-      articleData
+      data
     };
   }
 
@@ -24,7 +24,7 @@ class App extends Component {
         <Layout
           navOpen={this.state.navOpen}
           toggleNav={this.toggleNav}
-          articleData={this.state.articleData}
+          data={this.state.data}
         />
       </div>
     );

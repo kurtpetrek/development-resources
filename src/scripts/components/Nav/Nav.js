@@ -1,6 +1,22 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+function NavItem(props) {
+  return (
+    <li>
+      <a href={props.link} onClick={props.clickHandler}>
+        {props.title}
+      </a>
+    </li>
+  );
+}
+
+NavItem.propTypes = {
+  link: PropTypes.string,
+  clickHandler: PropTypes.func,
+  title: PropTypes.string
+};
+
 class Nav extends Component {
   render() {
     let navStatus;
@@ -9,6 +25,8 @@ class Nav extends Component {
     } else {
       navStatus = "closed";
     }
+
+    const data = this.props.data;
 
     return (
       <nav id="top-nav">
@@ -25,46 +43,17 @@ class Nav extends Component {
           </div>
         </div>
         <ul id="main-nav-items" className={navStatus}>
-          <li>
-            <a href="#references" onClick={this.props.handleToggle}>
-              References
-            </a>
-          </li>
-          <li>
-            <a href="#tutorials" onClick={this.props.handleToggle}>
-              Tutorials
-            </a>
-          </li>
-          <li>
-            <a href="#tutorial-videos" onClick={this.props.handleToggle}>
-              Tutorial Videos
-            </a>
-          </li>
-          <li>
-            <a href="#images" onClick={this.props.handleToggle}>
-              Images
-            </a>
-          </li>
-          <li>
-            <a href="#color" onClick={this.props.handleToggle}>
-              Color
-            </a>
-          </li>
-          <li>
-            <a href="#podcasts" onClick={this.props.handleToggle}>
-              Podcasts
-            </a>
-          </li>
-          <li>
-            <a href="#exercises" onClick={this.props.handleToggle}>
-              Exercises
-            </a>
-          </li>
-          <li>
-            <a href="#ebooks" onClick={this.props.handleToggle}>
-              ebooks
-            </a>
-          </li>
+          {Object.keys(data).map(itemKey => {
+            let item = data[itemKey];
+            return (
+              <NavItem
+                key={itemKey}
+                link={`#${itemKey}`}
+                clickHandler={this.props.handleToggle}
+                title={item.title}
+              />
+            );
+          })}
         </ul>
       </nav>
     );
@@ -73,7 +62,8 @@ class Nav extends Component {
 
 Nav.propTypes = {
   navOpen: PropTypes.bool,
-  handleToggle: PropTypes.func
+  handleToggle: PropTypes.func,
+  data: PropTypes.obj
 };
 
 export default Nav;
