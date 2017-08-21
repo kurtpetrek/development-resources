@@ -14,7 +14,7 @@ class MainContent extends Component {
       <section id="main-content" className={navStatus}>
         <Landing />
         <Welcome />
-        <ArticleList articleData={this.props.articleData} />
+        <ArticleList data={this.props.data} />
       </section>
     );
   }
@@ -22,7 +22,7 @@ class MainContent extends Component {
 
 MainContent.propTypes = {
   navStatus: PropTypes.bool,
-  articleData: PropTypes.object
+  data: PropTypes.object
 };
 
 export default MainContent;
