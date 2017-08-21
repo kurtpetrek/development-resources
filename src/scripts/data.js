@@ -1,6 +1,7 @@
 var articleData = {
   references: {
     title: "References",
+    id: "references",
     items: [
       {
         title: "W3Schools",
@@ -60,6 +61,7 @@ var articleData = {
   },
   tutorials: {
     title: "Tutorials",
+    id: "tutorials",
     items: [
       {
         title: "Codecademy",
@@ -100,6 +102,7 @@ var articleData = {
   },
   tutorialVideos: {
     title: "Tutorial Videos",
+    id: "tutorialVideos",
     items: [
       {
         title: "Lynda.com",
@@ -141,6 +144,7 @@ var articleData = {
   },
   images: {
     title: "Images",
+    id: "images",
     items: [
       {
         title: "Pixabay",
@@ -200,6 +204,7 @@ var articleData = {
   },
   color: {
     title: "Color",
+    id: "color",
     items: [
       {
         title: "Coolors",
@@ -222,6 +227,7 @@ var articleData = {
   },
   podcasts: {
     title: "Podcasts",
+    id: "podcasts",
     items: [
       {
         title: "Shop Talk Show",
@@ -244,6 +250,7 @@ var articleData = {
   },
   exercises: {
     title: "Exercises",
+    id: "exercises",
     items: [
       {
         title: "Flexbox Froggy",
@@ -285,6 +292,7 @@ var articleData = {
   },
   ebooks: {
     title: "eBooks",
+    id: "ebooks",
     items: [
       {
         title: "Learn to Code HTML & CSS",

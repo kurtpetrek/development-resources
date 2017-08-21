@@ -8,7 +8,7 @@ class ArticleItem extends Component {
     return (
       <div>
         <h3>
-          <a href={data.linkURL} target="_blank">
+          <a href={data.linkURL} target="_blank" rel="noopener noreferrer">
             {data.title}
           </a>
         </h3>
