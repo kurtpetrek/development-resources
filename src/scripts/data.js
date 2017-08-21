@@ -265,6 +265,12 @@ var articleData = {
         linkURL: "http://www.flexboxdefense.com/"
       },
       {
+        title: "CSS Grid Garden",
+        description:
+          "A game to help learn the basics of CSS grid.",
+        linkURL: "http://cssgridgarden.com/"
+      },
+      {
         title: "HTML &amp; CSS Quiz",
         description:
           "This is a small web app I am developing (still very much in beta) to help students test their HTML and CSS knowledge.",
