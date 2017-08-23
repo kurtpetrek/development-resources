@@ -63,7 +63,7 @@ class Nav extends Component {
 Nav.propTypes = {
   navOpen: PropTypes.bool,
   handleToggle: PropTypes.func,
-  data: PropTypes.obj
+  data: PropTypes.object
 };
 
 export default Nav;

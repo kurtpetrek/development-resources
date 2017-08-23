@@ -6,16 +6,18 @@ function ArticleSection(props) {
   const section = props.section;
   return (
     <div>
-      <h2 id={section}>References</h2>
+      <h2 id={props.sectionKey}>
+        {section.title}
+      </h2>
       {section.items.map(item => {
-        <ArticleItem data={item} key={item.title} />;
+        return <ArticleItem data={item} key={item.title} />;
       })}
     </div>
   );
 }
 
 ArticleSection.propTypes = {
-  section: PropTypes.obj
+  section: PropTypes.object
 };
 
 class ArticleList extends Component {
@@ -25,10 +27,13 @@ class ArticleList extends Component {
     return (
       <article className="resource-items">
         {Object.keys(data).map(sectionKey => {
-          <ArticleSection
-            key={`article-${sectionKey}`}
-            section={data[sectionKey]}
-          />;
+          return (
+            <ArticleSection
+              key={`article-${sectionKey}`}
+              section={data[sectionKey]}
+              sectionKey={sectionKey}
+            />
+          );
         })}
       </article>
     );
