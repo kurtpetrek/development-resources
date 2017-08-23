@@ -2,7 +2,7 @@
   "name": "Development-Resources",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kurtpetrek.github.io/development-resources/",
+  "homepage": "https://iansudderth.github.io/development-resources/",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "node-sass-chokidar": "^0.0.3",
