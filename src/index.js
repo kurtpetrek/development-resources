@@ -4,6 +4,6 @@ import Zen from "zenscroll";
 
 import App from "./App";
 
-import "../styles/styles.scss";
+import "./styles/styles.css";
 
-ReactDOM.render(<App />, document.getElementById("react-container"));
+ReactDOM.render(<App />, document.getElementById("root"));

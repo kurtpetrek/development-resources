@@ -6,11 +6,11 @@ function ArticleSection(props) {
   const section = props.section;
   return (
     <div>
-      <h2 id={section.id}>{section.title}</h2>
+      <h2 id={props.sectionKey}>
+        {section.title}
+      </h2>
       {section.items.map(item => {
-        return (
-          <ArticleItem data={item} key={item.title} />
-        );
+        return <ArticleItem data={item} key={item.title} />;
       })}
     </div>
   );
@@ -27,10 +27,11 @@ class ArticleList extends Component {
     return (
       <article className="resource-items">
         {Object.keys(data).map(sectionKey => {
-          return(
+          return (
             <ArticleSection
               key={`article-${sectionKey}`}
               section={data[sectionKey]}
+              sectionKey={sectionKey}
             />
           );
         })}
