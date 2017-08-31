@@ -8,16 +8,11 @@ View it live through gh-pages here https://kurtpetrek.github.io/development-reso
 To work on this project
 
 1. Clone Github repo
-2. cd into directory and run npm install
-3. Modify index.html to look for styles.css and main.js at root level
-4. Run $ npm start
-5. Direct browser to localhost:8080
-6. Do work
+2. cd into directory and run $ npm install
+3. Run $ npm start
 
 
 ## Deployment Instructions
-To deploy this project
+To deploy this project to gh-pages branch
 
-1. Run $ npm run build
-2. Modify index.html to look for styles.css and main.js in dist directory
-3. Issue pull request
+1. Run $ npm run deploy
