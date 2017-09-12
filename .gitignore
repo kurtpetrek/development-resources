@@ -67,3 +67,6 @@ typings/
 
 # Build directory
 build/
+
+# Ignore transpiled css files
+src/**/*.css
