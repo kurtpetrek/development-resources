@@ -86,7 +86,7 @@ class Welcome extends Component {
         <p>
           Contact me at{" "}
           <a
-            href="//kurtpetrek.com/contact"
+            href="http://kurtpetrek.com/contact"
             target="_blank"
             rel="noopener noreferrer"
           >
