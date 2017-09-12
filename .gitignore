@@ -64,3 +64,6 @@ typings/
 
 #webstrom
 .idea/
+
+# Build directory
+build/
