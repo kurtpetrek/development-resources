@@ -271,7 +271,7 @@ var articleData = {
         linkURL: "http://cssgridgarden.com/"
       },
       {
-        title: "HTML &amp; CSS Quiz",
+        title: "HTML & CSS Quiz",
         description:
           "This is a small web app I am developing (still very much in beta) to help students test their HTML and CSS knowledge.",
         linkURL: "http://kurtpetrek.com/quiz"
