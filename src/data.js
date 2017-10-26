@@ -266,8 +266,7 @@ var articleData = {
       },
       {
         title: "CSS Grid Garden",
-        description:
-          "A game to help learn the basics of CSS grid.",
+        description: "A game to help learn the basics of CSS grid.",
         linkURL: "http://cssgridgarden.com/"
       },
       {
@@ -300,6 +299,13 @@ var articleData = {
     title: "eBooks",
     id: "ebooks",
     items: [
+      {
+        title: "Free Programming eBooks",
+        description:
+          "This GitHub repo contains links to many free eBooks on a variety of programming languages. This link will take you directly to the book selection in English though it is also available in a variety of other languages.",
+        linkURL:
+          "https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books.md"
+      },
       {
         title: "Learn to Code HTML & CSS",
         description: "A good ebook to help learn HTML and CSS basics.",
