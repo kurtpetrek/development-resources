@@ -6,6 +6,7 @@ View it live through gh-pages here https://kurtpetrek.github.io/development-reso
 
 ## Contributors
 
+[Kurt Petrek](http://www.kurtpetrek.com/)
 [Ian Sudderth](http://www.iansudderth.com/)
 
 ### Development Instructions
