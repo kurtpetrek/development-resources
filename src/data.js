@@ -55,7 +55,7 @@ var articleData = {
         title: "Codepen",
         description:
           "Codepen is a showcase of front end code.  On Codepen you can find many different projects users have developed to use as examples.  I don't recommend copying others code but rather learning from example and writing your own.",
-        linkURL: "http://caniuse.com/"
+        linkURL: "https://codepen.io/"
       }
     ]
   },
