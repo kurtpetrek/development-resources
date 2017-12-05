@@ -94,9 +94,9 @@ var articleData = {
         linkURL: "http://learngitbranching.js.org/"
       },
       {
-        title: "RegExr",
-        description: "A website to help learn regular expressions.",
-        linkURL: "http://regexr.com/"
+        title: "RegexOne",
+        description: "A very helpful website to help learn regular expressions.",
+        linkURL: "https://regexone.com/"
       }
     ]
   },
